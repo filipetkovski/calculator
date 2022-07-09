@@ -24,6 +24,7 @@ body {
     column-gap: 11px;
     row-gap: 11px;
     padding: 10px;
+    touch-action: manipulation;
 }
 
 .text {
