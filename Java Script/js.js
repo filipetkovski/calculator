@@ -2,13 +2,11 @@ let final = 0;
 let flag;
 let num = 0;
 let num1;
-let num3 = 0;
 let op;
 
 function numbers(n) {
     let eqq = document.getElementById('eq');
     num = (num * 10) + n;
-    num3 = n;
 
     eqq.innerHTML = "";
     eqq.innerHTML = num;
@@ -77,7 +75,7 @@ function ac() {
 function c() {
     if(flag === 1) {
         let eqq = document.getElementById('eq')
-        num = (num-num3) / 10;
+        num = (num-(num%10)) / 10;
         if(num>0) {
             eqq.innerHTML = num;
         }
