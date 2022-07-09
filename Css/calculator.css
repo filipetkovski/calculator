@@ -10,7 +10,7 @@ body {
     margin: auto;
     background-color: black;
     width: 320px;
-    height: 600px;
+    height: 500px;
     position: relative;
     display: flex;
     flex-direction: column;
