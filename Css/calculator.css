@@ -76,10 +76,14 @@ button:hover {
 }
 
 .off1 {
+    height: 70px;
+    width: 76px;
     background: gray;
 }
 
 .off2 {
+    height: 70px;
+    width: 76px;
     background: #3a3a3a;
 }
 
