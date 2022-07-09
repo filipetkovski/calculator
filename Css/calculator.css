@@ -9,7 +9,7 @@ body {
 .calculator {
     margin: auto;
     background-color: black;
-    width: 356px;
+    width: 320px;
     height: 600px;
     position: relative;
     display: flex;
@@ -43,12 +43,12 @@ body {
 
 .num button, .op button, .ac button, .comma button{
 
-    font-size: 2.5em;
+    font-size: 2em;
     background-color: #3a3a3a;
     color: white;
     border: none;
-    height: 70px;
-    width: 76px;
+    height: 65px;
+    width: 66.477px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,14 +76,13 @@ button:hover {
 }
 
 .off1 {
-    height: 70px;
-    width: 76px;
+    height: 65px;
     background: gray;
 }
 
 .off2 {
-    height: 70px;
-    width: 76px;
+    height: 65px;
+
     background: #3a3a3a;
 }
 
