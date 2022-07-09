@@ -4,6 +4,7 @@ body {
     display: flex;
     align-items: end;
     background: black;
+    overflow: hidden;
 }
 
 .calculator {
@@ -39,6 +40,7 @@ body {
     overflow-x: hidden;
     border: 1px solid white;
     height: 70px;
+    touch-action: manipulation;
 }
 
 
@@ -79,11 +81,12 @@ button:hover {
 .off1 {
     height: 65px;
     background: gray;
+    touch-action: manipulation;
 }
 
 .off2 {
     height: 65px;
-
+    touch-action: manipulation;
     background: #3a3a3a;
 }
 

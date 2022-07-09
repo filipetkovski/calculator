@@ -1,19 +1,27 @@
+//Models
 let final = 0;
 let flag;
 let num = 0;
 let num1;
 let op;
+let com = 0;
 
+//Adding Numbers
 function numbers(n) {
     let eqq = document.getElementById('eq');
-    num = (num * 10) + n;
-
+    if(com === 1) {
+        num += n/10;
+    }
+    else {
+        num = (num * 10) + n;
+    }
     eqq.innerHTML = "";
     eqq.innerHTML = num;
 
-    flag=1;
+    flag = 1;
 }
 
+//Operations
 function operator(opr) {
     let eqq = document.getElementById('eq');
     num1 = num;
@@ -37,8 +45,10 @@ function operator(opr) {
 
     num = 0;
     flag=0;
+    com = 0;
 }
 
+//Equal button
 function equal() {
    let eqq = document.getElementById('eq')
 
@@ -60,27 +70,45 @@ function equal() {
 
    final = 0;
    num = 0;
-    flag=0;
+   flag = 0;
+   com = 0;
 }
 
+//AC button
 function ac() {
     let eqq = document.getElementById('eq')
     eqq.innerHTML = '0';
 
     num = 0;
     final = 0;
-    flag=1;
+    com = 0;
+    flag = 1;
 }
 
+//C buttom
 function c() {
     if(flag === 1) {
         let eqq = document.getElementById('eq')
-        num = (num-(num%10)) / 10;
-        if(num>0) {
-            eqq.innerHTML = num;
+        if(com === 1) {
+            eqq.innerHTML = Math.round(num);
+            com = 0;
         }
         else {
-            eqq.innerHTML = "0";
+            if(num>0) {
+                eqq.innerHTML = num;
+            }
+            else {
+                eqq.innerHTML = "0";
+            }
         }
     }
+}
+
+//Comma button
+function comma() {
+    let eqq = document.getElementById('eq')
+    if(flag === 1) {
+        eqq.innerHTML = num + '.';
+    }
+    com = 1;
 }
