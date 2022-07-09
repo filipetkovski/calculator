@@ -11,7 +11,7 @@ body {
     margin: auto;
     background-color: black;
     width: 320px;
-    height: 500px;
+    height: 470px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,15 +37,15 @@ body {
     font-family: Arial, sans-serif;
     padding: 0 10px;
     margin: 0 10px;
-    overflow-x: hidden;
+    overflow-x: auto;
+    overflow-scrolling: auto;
     border: 1px solid white;
     height: 70px;
     touch-action: manipulation;
 }
 
 
-.num button, .op button, .ac button, .comma button{
-
+.num button, .op button, .ac button, .comma button, .percent button {
     font-size: 2em;
     background-color: #3a3a3a;
     color: white;
@@ -58,6 +58,10 @@ body {
     cursor: pointer;
 }
 
+.op3, .op4 {
+    padding-bottom: 6px;
+}
+
 button:hover {
     opacity: 0.8;
 }
@@ -66,7 +70,7 @@ button:hover {
     background: #797979;
 }
 
-.ac button {
+.ac button, .percent button {
     background: gray;
 }
 
@@ -90,9 +94,17 @@ button:hover {
     background: #3a3a3a;
 }
 
+button:active {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
 
 @media (max-width: 450px) {
     body {
         align-items: start;
+    }
+    button:hover {
+        opacity: 1;
     }
 }

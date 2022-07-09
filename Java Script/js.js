@@ -2,7 +2,7 @@
 let final = 0;
 let flag;
 let num = 0;
-let num1;
+let num1 = 0;
 let num3 = 0;
 let op;
 let com = 0;
@@ -55,8 +55,8 @@ function numbers(n) {
 //Operations
 function operator(opr) {
     let eqq = document.getElementById('eq');
-    num1 = num;
     off();
+    num1 = num;
 
     if(flag2 === 1) {
         if(opr === '+') {
@@ -105,7 +105,9 @@ function equal() {
     }
     else if(op === '/') {
         final = num1 / num;
-        final =  final.toFixed(3);
+        if((num1%num) !== 0) {
+            final = final.toFixed(1);
+        }
     }
 
    eqq.innerHTML = "";
@@ -149,6 +151,11 @@ function c() {
         }
     }
     on();
+}
+
+//Percent
+function percent() {
+
 }
 
 //Comma button
