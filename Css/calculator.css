@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: end;
+    background: black;
+}
+
+.calculator {
+    margin: auto;
+    background-color: black;
+    width: 356px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: end;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: 76px 76px 76px 76px;
+    column-gap: 11px;
+    row-gap: 11px;
+    padding: 10px;
+}
+
+.text {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    color: white;
+    font-size: 3.5em;
+    font-family: Arial, sans-serif;
+    padding: 0 10px;
+    margin: 0 10px;
+    overflow-x: hidden;
+    border: 1px solid white;
+    height: 70px;
+}
+
+
+.num button, .op button, .ac button, .comma button{
+
+    font-size: 2.5em;
+    background-color: #3a3a3a;
+    color: white;
+    border: none;
+    height: 70px;
+    width: 76px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.ac button:hover {
+    background: #797979;
+}
+
+.ac button {
+    background: gray;
+}
+
+.op button {
+    background: orange;
+}
+
+.num0 {
+    position: absolute;
+}
+
+.off1 {
+    background: gray;
+}
+
+.off2 {
+    background: #3a3a3a;
+}
+
+
+.ac, .comma, .num, .op {
+}
+
+@media (max-width: 450px) {
+    .calculator {
+        margin: 0 auto;
+    }
+}
