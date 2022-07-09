@@ -20,7 +20,7 @@ body {
 
 .keyboard {
     display: grid;
-    grid-template-columns: 76px 76px 76px 76px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 11px;
     row-gap: 11px;
     padding: 10px;
@@ -49,7 +49,9 @@ body {
     border: none;
     height: 70px;
     width: 76px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -81,12 +83,3 @@ button:hover {
     background: #3a3a3a;
 }
 
-
-.ac, .comma, .num, .op {
-}
-
-@media (max-width: 450px) {
-    .calculator {
-        margin: 0 auto;
-    }
-}
