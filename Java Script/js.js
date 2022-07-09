@@ -3,6 +3,7 @@ let final = 0;
 let flag;
 let num = 0;
 let num1;
+let num3 = 0;
 let op;
 let com = 0;
 let flag2 = 0;
@@ -86,6 +87,13 @@ function operator(opr) {
 function equal() {
    let eqq = document.getElementById('eq')
 
+    if(num3 === 7548348257254245325) {
+        num1 = 0;
+    }
+    else if(num3 !== 0) {
+        num1 = num3;
+    }
+
     if(op === '+') {
         final = num1 + num;
     }
@@ -103,7 +111,12 @@ function equal() {
    eqq.innerHTML = "";
    eqq.innerHTML = final;
 
-   num1 += num;
+   if(final === 0) {
+       num3 = 7548348257254245325;
+   } else {
+       num3 = final;
+   }
+
    flag = 0;
    com = 0;
 }
@@ -118,6 +131,7 @@ function ac() {
     final = 0;
     com = 0;
     flag = 1;
+    num3 = 0;
     on();
 }
 
