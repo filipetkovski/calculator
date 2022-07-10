@@ -7,6 +7,8 @@ let num3 = 0;
 let op;
 let com = 0;
 let flag2 = 0;
+let x = 1;
+let br = 0;
 
 function off() {
     let opHover0 = document.querySelector('.op1');
@@ -39,13 +41,15 @@ function on(){
 function numbers(n) {
     let eqq = document.getElementById('eq');
     if(com === 1) {
-        num += n/10;
+        x/=10;
+        num += (n * x);
+        br++;
     }
     else {
         num = (num * 10) + n;
     }
     eqq.innerHTML = "";
-    eqq.innerHTML = num;
+    eqq.innerHTML = num.toFixed(br);
 
     flag = 1;
     flag2 = 1;
@@ -79,8 +83,10 @@ function operator(opr) {
         num = 0;
         flag = 0;
         com = 0;
+        x = 1;
     }
     flag2 = 0;
+    br = 0;
 }
 
 //Equal button
@@ -120,7 +126,9 @@ function equal() {
    }
 
    flag = 0;
+    x = 1;
    com = 0;
+    br = 0;
 }
 
 //AC button
@@ -134,6 +142,8 @@ function ac() {
     com = 0;
     flag = 1;
     num3 = 0;
+    x = 1;
+    br = 0;
     on();
 }
 
@@ -146,11 +156,18 @@ function c() {
             eqq.innerHTML = num;
         }
         else {
-            eqq.innerHTML = Math.round(num);
+            if(num.toFixed(0) > num) {
+                num = num.toFixed(0) - 1;
+            } else {
+                num = num.toFixed(0);
+            }
+            eqq.innerHTML = num;
             com = 0;
         }
     }
     on();
+    x = 1;
+    br = 0;
 }
 
 //Percent
