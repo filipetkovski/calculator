@@ -115,22 +115,15 @@ button:active {
     transition: 0.5s;
 }
 
-.num0 button{
-
-}
-
 .copy {
     position: absolute;
-    bottom: 85px;
+    bottom: 10px;
     font-family: Arial, sans-serif;
     color: white;
     font-size: 0.7em;
 }
 
 @media (max-width: 450px) {
-    body {
-        align-items: start;
-    }
     button:hover {
         opacity: 1;
     }
