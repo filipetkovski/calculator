@@ -105,15 +105,9 @@ function equal() {
     }
     else if(op === '-') {
         final = num1 - num;
-        if(com === 1) {
-            final = final.toFixed(1);
-        }
     }
     else if(op === '*') {
         final = num1 * num;
-        if((num1%num) !== 0) {
-            final = final.toFixed(1);
-        }
     }
     else if(op === '/') {
         final = num1 / num;
@@ -189,4 +183,48 @@ function comma() {
     }
     com = 1;
     on();
+}
+
+//Keyboard buttons
+
+window.addEventListener("keydown", activate);
+
+function activate(e) {
+    if(e.keyCode === 48) {
+        numbers(0);
+    } else if((e.keyCode === 56) && (e.shiftKey === true)) {
+        operator('*');
+    } else if(e.keyCode === 49) {
+        numbers(1);
+    } else if(e.keyCode === 50) {
+        numbers(2);
+    } else if(e.keyCode === 51) {
+        numbers(3);
+    } else if(e.keyCode === 52) {
+        numbers(4);
+    } else if(e.keyCode === 53) {
+        numbers(5);
+    } else if(e.keyCode === 54) {
+        numbers(6);
+    } else if(e.keyCode === 55) {
+        numbers(7);
+    } else if(e.keyCode === 56) {
+        numbers(8);
+    } else if(e.keyCode === 57) {
+        numbers(9);
+    } else if(e.keyCode === 8) {
+        c();
+    } else if(e.keyCode === 188) {
+        comma();
+    } else if(e.keyCode === 187 && e.shiftKey === true) {
+        operator('+');
+    } else if(e.keyCode === 189) {
+        operator('-');
+    } else if(e.keyCode === 191) {
+        operator('/');
+    } else if(e.keyCode === 27) {
+        ac();
+    } else if(e.keyCode === 13) {
+        equal();
+    }
 }
