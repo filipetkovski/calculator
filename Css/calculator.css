@@ -42,6 +42,7 @@ body {
     border: 1px solid white;
     height: 70px;
     touch-action: manipulation;
+    border-radius: 20px;
 }
 
 
@@ -56,6 +57,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .op3, .op4 {
@@ -86,12 +88,14 @@ button:hover {
     height: 65px;
     background: gray;
     touch-action: manipulation;
+    border-radius: 20px;
 }
 
 .off2 {
     height: 65px;
     touch-action: manipulation;
     background: #3a3a3a;
+    border-radius: 20px;
 }
 
 button:active {
@@ -99,6 +103,9 @@ button:active {
     transition: 0.5s;
 }
 
+.num0 button{
+
+}
 
 @media (max-width: 450px) {
     body {
