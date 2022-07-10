@@ -105,9 +105,15 @@ function equal() {
     }
     else if(op === '-') {
         final = num1 - num;
+        if((num1%num) !== 0) {
+            final = final.toFixed(1);
+        }
     }
     else if(op === '*') {
         final = num1 * num;
+        if((num1%num) !== 0) {
+            final = final.toFixed(1);
+        }
     }
     else if(op === '/') {
         final = num1 / num;
