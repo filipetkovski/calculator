@@ -105,7 +105,7 @@ function equal() {
     }
     else if(op === '-') {
         final = num1 - num;
-        if((num1%num) !== 0) {
+        if(com === 1) {
             final = final.toFixed(1);
         }
     }
