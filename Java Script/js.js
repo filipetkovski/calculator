@@ -303,7 +303,7 @@ function comma() {
 
     let eqq = document.getElementById('eq')
     if(flag === 1) {
-        eqq.innerHTML = num + '.';
+        eqq.innerHTML = num + ',';
     }
     com = 1;
     pass = 1;
