@@ -165,7 +165,7 @@ function equal() {
     }
     else if(op === '/') {
         final = num1 / num;
-        if((num1%num) !== 0) {
+        if((num1%num) !== 0 && com === 0) {
             final = final.toFixed(1);
         }
     }
