@@ -78,8 +78,9 @@ button:hover {
     opacity: 0.8;
 }
 
-.ac button:hover, .minus-plus button:hover {
+.ac button:hover, .minus-plus1 button:hover, .minus-plus2 button:hover {
     background: #797979;
+    color: white;
 }
 
 .ac button, .minus-plus1 button, .minus-plus2 button {
