@@ -10,6 +10,7 @@ let flag2 = 0;
 let x = 1;
 let br = 0;
 let row = 0;
+let pass = 0;
 
 function off() {
     let opHover0 = document.querySelector('.op1');
@@ -43,7 +44,7 @@ function on(){
 //Adding Numbers
 function numbers(n) {
     let eqq = document.getElementById('eq');
-    if(com === 1) {
+    if(pass === 1) {
         x/=10;
         num += (n * x);
         br++;
@@ -90,12 +91,13 @@ function operator(opr) {
 
         num = 0;
         flag = 0;
-        com = 0;
+
         x = 1;
     }
     flag2 = 0;
     br = 0;
     row = 1;
+    pass = 0;
 }
 
 //Equal 2
@@ -137,6 +139,7 @@ function equal2() {
     flag = 0;
     x = 1;
     com = 0;
+    pass = 0;
     br = 0;
 }
 
@@ -167,8 +170,14 @@ function equal() {
         }
     }
 
-   eqq.innerHTML = "";
-   eqq.innerHTML = final;
+    if(com === 1) {
+        eqq.innerHTML = "";
+        eqq.innerHTML = final.toFixed(1);
+    }
+    else {
+        eqq.innerHTML = "";
+        eqq.innerHTML = final;
+    }
 
    if(final === 0) {
        num3 = 7548348257254245325;
@@ -181,6 +190,7 @@ function equal() {
    com = 0;
     br = 0;
     row = 0;
+    pass = 0;
 }
 
 //AC button
@@ -197,6 +207,7 @@ function ac() {
     x = 1;
     br = 0;
     row = 0;
+    pass = 0;
     on();
 }
 
@@ -216,6 +227,7 @@ function c() {
             }
             eqq.innerHTML = num;
             com = 0;
+            pass = 0;
         }
     }
     on();
@@ -235,6 +247,7 @@ function comma() {
         eqq.innerHTML = num + '.';
     }
     com = 1;
+    pass = 1;
     on();
 }
 
