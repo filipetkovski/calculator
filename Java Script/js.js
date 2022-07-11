@@ -11,6 +11,7 @@ let x = 1;
 let br = 0;
 let row = 0;
 let pass = 0;
+let minPlus = 0;
 
 function off() {
     let opHover0 = document.querySelector('.op1');
@@ -52,11 +53,17 @@ function numbers(n) {
     else {
         num = (num * 10) + n;
     }
+
+    if(minPlus === 1) {
+        num *= -1;
+    }
+
     eqq.innerHTML = "";
     eqq.innerHTML = num.toFixed(br);
 
     flag = 1;
     flag2 = 1;
+    minPlus = 0;
     on();
 }
 
@@ -98,6 +105,7 @@ function operator(opr) {
     br = 0;
     row = 1;
     pass = 0;
+    minPlus = 0;
 }
 
 //Equal 2
@@ -141,6 +149,7 @@ function equal2() {
     com = 0;
     pass = 0;
     br = 0;
+    minPlus = 0;
 }
 
 //Equal button
@@ -191,6 +200,7 @@ function equal() {
     br = 0;
     row = 0;
     pass = 0;
+    minPlus = 0;
 }
 
 //AC button
@@ -208,6 +218,7 @@ function ac() {
     br = 0;
     row = 0;
     pass = 0;
+    minPlus = 0;
     on();
 }
 
@@ -235,8 +246,13 @@ function c() {
     br = 0;
 }
 
-//Percent
-function percent() {
+//Minus and Plus
+function minusPlus() {
+    let eqq = document.getElementById('eq')
+
+    minPlus = 1;
+    eqq.innerHTML = '';
+    eqq.innerHTML = "-" + 0;
 
 }
 
