@@ -9,6 +9,7 @@ let com = 0;
 let flag2 = 0;
 let x = 1;
 let br = 0;
+let row = 0;
 
 function off() {
     let opHover0 = document.querySelector('.op1');
@@ -16,6 +17,7 @@ function off() {
     let opHover2 = document.querySelector('.op3');
     let opHover3 = document.querySelector('.op4');
     let opHover4 = document.querySelector('.op5');
+
     opHover0.style.pointerEvents = "none";
     opHover1.style.pointerEvents = "none";
     opHover2.style.pointerEvents = "none";
@@ -29,6 +31,7 @@ function on(){
     let opHover2 = document.querySelector('.op3');
     let opHover3 = document.querySelector('.op4');
     let opHover4 = document.querySelector('.op5');
+
     opHover0.style.pointerEvents = "unset";
     opHover1.style.pointerEvents = "unset";
     opHover2.style.pointerEvents = "unset";
@@ -60,6 +63,11 @@ function numbers(n) {
 function operator(opr) {
     let eqq = document.getElementById('eq');
     off();
+
+    if(row === 1) {
+        equal2();
+    }
+
     num1 = num;
 
     if(flag2 === 1) {
@@ -86,6 +94,49 @@ function operator(opr) {
         x = 1;
     }
     flag2 = 0;
+    br = 0;
+    row = 1;
+}
+
+//Equal 2
+function equal2() {
+    let eqq = document.getElementById('eq')
+
+    if(num3 === 7548348257254245325) {
+        num1 = 0;
+    }
+    else if(num3 !== 0) {
+        num1 = num3;
+    }
+
+    if(op === '+') {
+        final = num1 + num;
+    }
+    else if(op === '-') {
+        final = num1 - num;
+    }
+    else if(op === '*') {
+        final = num1 * num;
+    }
+    else if(op === '/') {
+        final = num1 / num;
+        if((num1%num) !== 0) {
+            final = final.toFixed(1);
+        }
+    }
+
+    eqq.innerHTML = "";
+    eqq.innerHTML = final;
+
+    if(final === 0) {
+        num3 = 7548348257254245325;
+    } else {
+        num3 = final;
+    }
+
+    flag = 0;
+    x = 1;
+    com = 0;
     br = 0;
 }
 
@@ -129,6 +180,7 @@ function equal() {
     x = 1;
    com = 0;
     br = 0;
+    row = 0;
 }
 
 //AC button
@@ -144,6 +196,7 @@ function ac() {
     num3 = 0;
     x = 1;
     br = 0;
+    row = 0;
     on();
 }
 
