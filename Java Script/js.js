@@ -1,6 +1,6 @@
 //Models
 let final = 0;
-let flag;
+let flag = 1;
 let num = 0;
 let num1 = 0;
 let num3 = 0;
@@ -249,11 +249,28 @@ function c() {
 //Minus and Plus
 function minusPlus() {
     let eqq = document.getElementById('eq')
+    let but1 = document.querySelector(".minus-plus1");
+    let but2 = document.querySelector(".minus-plus2");
+
+    but1.style.display = 'none';
+    but2.style.display = 'unset';
 
     minPlus = 1;
     eqq.innerHTML = '';
-    eqq.innerHTML = "-" + 0;
+    eqq.innerHTML = '-' + 0;
+}
 
+function plusMinus() {
+    let eqq = document.getElementById('eq')
+    let but1 = document.querySelector(".minus-plus1");
+    let but2 = document.querySelector(".minus-plus2");
+
+    but1.style.display = 'grid';
+    but2.style.display = 'none';
+
+    minPlus = 0;
+    eqq.innerHTML = '';
+    eqq.innerHTML = 0;
 }
 
 //Comma button
