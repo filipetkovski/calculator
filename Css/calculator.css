@@ -56,7 +56,7 @@ body {
 }
 
 
-.num button, .op button, .ac button, .comma button, .percent button, .minus-plus1 button, .minus-plus2 button {
+.num button, .op button, .numog button, .ac button, .comma button, .percent button, .minus-plus1 button, .minus-plus2 button {
     font-size: 2em;
     transition: 0.5s;
     border: none;
@@ -78,21 +78,26 @@ body {
     padding-bottom: 6px;
 }
 
+.numog {
+    cursor: pointer;
+}
+
+.numog:hover {
+    opacity: 0.7;
+}
+
 .num button:hover, .comma button:hover {
     opacity: 0.7;
 }
 
-.og:hover, .og:hover button {
-    opacity: 0.8;
-}
-
 .ac button:hover, .minus-plus1 button:hover, .minus-plus2 button:hover {
-    opacity: 0.7;
+    background: #cccccc;
+    color: black;
 }
 
 .ac button, .minus-plus1 button, .minus-plus2 button {
-    background: #c4c4c4;
-    color: black;
+    background: gray;
+    color: white;
 }
 
 .op button {
@@ -105,16 +110,18 @@ body {
     color: orange;
 }
 
-.og {
+.numog {
     display: flex;
     flex-direction: row;
     background: #3a3a3a;
     border-radius: 20px;
     grid-column: 1 / 3;
+    transition: 0.5s;
 }
 
-.num0 {
-    padding: 0;
+.numog button {
+    background-color: #3a3a3a;
+    color: white;
 }
 
 .c {
