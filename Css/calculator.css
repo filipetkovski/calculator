@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     background: black;
-    overflow: hidden;
+    overflow-y: hidden;
     position: relative;
 }
 
@@ -70,7 +70,7 @@ body {
     border-radius: 20px;
 }
 
-.op3, .op4 {
+.op3 {
     padding-bottom: 6px;
 }
 
@@ -83,7 +83,8 @@ button:hover {
 }
 
 .ac button, .minus-plus1 button, .minus-plus2 button {
-    background: gray;
+    background: #c5c5c5;
+    color: black;
 }
 
 .op button {

@@ -41,9 +41,29 @@ function on(){
     opHover4.style.pointerEvents = "unset";
 }
 
+function minus() {
+    let but1 = document.querySelector(".minus-plus1");
+    let but2 = document.querySelector(".minus-plus2");
+
+    but1.style.display = 'none';
+    but2.style.display = 'unset';
+}
+
+function plus() {
+    let but1 = document.querySelector(".minus-plus1");
+    let but2 = document.querySelector(".minus-plus2");
+
+    but1.style.display = 'grid';
+    but2.style.display = 'none';
+}
+
 
 //Adding Numbers
 function numbers(n) {
+    let ac = document.querySelector(".ac1");
+    ac.innerHTML = "";
+    ac.innerHTML = "C";
+
     let eqq = document.getElementById('eq');
     if(pass === 1) {
         x/=10;
@@ -64,6 +84,7 @@ function numbers(n) {
     flag = 1;
     flag2 = 1;
     minPlus = 0;
+    plus();
     on();
 }
 
@@ -101,6 +122,7 @@ function operator(opr) {
 
         x = 1;
     }
+    plus();
     flag2 = 0;
     br = 0;
     row = 1;
@@ -144,6 +166,7 @@ function equal2() {
         num3 = final;
     }
 
+    plus();
     flag = 0;
     x = 1;
     com = 0;
@@ -194,6 +217,7 @@ function equal() {
        num3 = final;
    }
 
+    plus();
    flag = 0;
     x = 1;
    com = 0;
@@ -205,6 +229,10 @@ function equal() {
 
 //AC button
 function ac() {
+    let ac = document.querySelector(".ac1");
+    ac.innerHTML = "";
+    ac.innerHTML = "AC";
+
     let eqq = document.getElementById('eq')
     eqq.innerHTML = '0';
 
@@ -219,6 +247,7 @@ function ac() {
     row = 0;
     pass = 0;
     minPlus = 0;
+    plus();
     on();
 }
 
@@ -231,6 +260,7 @@ function c() {
             eqq.innerHTML = num;
         }
         else {
+            plus();
             if(num.toFixed(0) > num) {
                 num = num.toFixed(0) - 1;
             } else {
@@ -249,32 +279,28 @@ function c() {
 //Minus and Plus
 function minusPlus() {
     let eqq = document.getElementById('eq')
-    let but1 = document.querySelector(".minus-plus1");
-    let but2 = document.querySelector(".minus-plus2");
-
-    but1.style.display = 'none';
-    but2.style.display = 'unset';
+    minus();
 
     minPlus = 1;
     eqq.innerHTML = '';
-    eqq.innerHTML = '-' + 0;
+    eqq.innerHTML = '-' + num;
 }
 
 function plusMinus() {
     let eqq = document.getElementById('eq')
-    let but1 = document.querySelector(".minus-plus1");
-    let but2 = document.querySelector(".minus-plus2");
-
-    but1.style.display = 'grid';
-    but2.style.display = 'none';
+    plus()
 
     minPlus = 0;
     eqq.innerHTML = '';
-    eqq.innerHTML = 0;
+    eqq.innerHTML = num;
 }
 
 //Comma button
 function comma() {
+    let ac = document.querySelector(".ac1");
+    ac.innerHTML = "";
+    ac.innerHTML = "C";
+
     let eqq = document.getElementById('eq')
     if(flag === 1) {
         eqq.innerHTML = num + '.';
