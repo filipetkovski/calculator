@@ -9,7 +9,6 @@ let com = 0;
 let flag2 = 0;
 let x = 1;
 let br = 0;
-let row = 0;
 let pass = 0;
 let minPlus = 0;
 
@@ -93,10 +92,6 @@ function operator(opr) {
     let eqq = document.getElementById('eq');
     off();
 
-    if(row === 1) {
-        equal2();
-    }
-
     num1 = num;
 
     if(flag2 === 1) {
@@ -125,59 +120,13 @@ function operator(opr) {
     plus();
     flag2 = 0;
     br = 0;
-    row = 1;
     pass = 0;
-    minPlus = 0;
-}
-
-//Equal 2
-function equal2() {
-    let eqq = document.getElementById('eq')
-
-    if(num3 === 7548348257254245325) {
-        num1 = 0;
-    }
-    else if(num3 !== 0) {
-        num1 = num3;
-    }
-
-    if(op === '+') {
-        final = num1 + num;
-    }
-    else if(op === '-') {
-        final = num1 - num;
-    }
-    else if(op === '*') {
-        final = num1 * num;
-    }
-    else if(op === '/') {
-        final = num1 / num;
-        if((num1%num) !== 0) {
-            final = final.toFixed(1);
-        }
-    }
-
-    eqq.innerHTML = "";
-    eqq.innerHTML = final;
-
-    if(final === 0) {
-        num3 = 7548348257254245325;
-    } else {
-        num3 = final;
-    }
-
-    plus();
-    flag = 0;
-    x = 1;
-    com = 0;
-    pass = 0;
-    br = 0;
     minPlus = 0;
 }
 
 //Equal button
 function equal() {
-   let eqq = document.getElementById('eq')
+    let eqq = document.getElementById('eq')
 
     if(num3 === 7548348257254245325) {
         num1 = 0;
@@ -211,18 +160,20 @@ function equal() {
         eqq.innerHTML = final;
     }
 
-   if(final === 0) {
-       num3 = 7548348257254245325;
-   } else {
-       num3 = final;
-   }
+    if(final === 0) {
+        num3 = 7548348257254245325;
+    } else {
+        num3 = final;
+    }
 
     plus();
-   flag = 0;
+    num = 0;
+    num1 = 0;
+    final = 0;
+    flag = 0;
     x = 1;
-   com = 0;
+    com = 0;
     br = 0;
-    row = 0;
     pass = 0;
     minPlus = 0;
 }
@@ -244,7 +195,6 @@ function ac() {
     num3 = 0;
     x = 1;
     br = 0;
-    row = 0;
     pass = 0;
     minPlus = 0;
     plus();

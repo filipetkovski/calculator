@@ -157,4 +157,7 @@ button:active {
         background-color: gray;
         color: white;
     }
+    .op button {
+        margin-bottom: 6px;
+    }
 }
